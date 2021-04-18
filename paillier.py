@@ -16,7 +16,7 @@ def gcd(a,b):
     return a
     
 def lcm(a, b):
-    return a * b / gcd(a, b)    
+    return a * b // gcd(a, b)    
     
     
 def int_time():
@@ -46,8 +46,8 @@ class PublicKey(object):
 def generate_keypair(bits):
     p_equal_q = True
     while p_equal_q:
-        p = getPrime(bits / 2)
-        q = getPrime(bits / 2)
+        p = getPrime(bits // 2)
+        q = getPrime(bits // 2)
         if (p!=q):
             p_equal_q = False
     n = p * q
